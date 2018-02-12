@@ -1,0 +1,28 @@
+
+import java.lang.*;
+class Arc
+{
+    void met1(int a[])throws ArrayIndexOutOfBoundsException{
+        for(int i=0;i<=a.length;i++)
+        {
+            System.out.println(a[i]);
+        }
+    }
+}
+
+public class Arcexe {
+    public static void main(String[] a)
+    {
+        int ar[]={5,10,15,20,100};
+        Arc obj=new Arc();
+        try{
+            obj.met1(ar);
+        }
+       catch(ArrayIndexOutOfBoundsException e){
+           System.out.println("run time error-Array Index Out Of Bounds Exception");
+       }
+        finally{
+            System.out.println("closing the main function ");
+        }
+    }
+}

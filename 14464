@@ -1,0 +1,28 @@
+
+
+interface InfaceA{
+	int reve(int n);
+}
+
+class Test implements InfaceA{
+	public int reve(int n){
+		int re=0,s;
+		while(n!=0){
+			s = n % 10;
+			re = re*10 + s;
+			n = n/10;
+		}
+		return re;
+	}
+}
+public class Rev {
+	public static void main(String[] args){
+		int a = 123456;
+		InfaceA iob;
+		Test tob = new Test();
+		iob = tob;
+		int b = iob.reve(a);
+		System.out.println(b);
+	}
+
+}

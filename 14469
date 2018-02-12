@@ -1,0 +1,45 @@
+
+class Vol{
+	double l,h;
+	final double pi = 3.14;
+	Vol(double a,double b){
+		l=a;
+		h=b;
+	}
+	void volu(){
+		System.out.println("general volume" );
+	}	
+}
+
+class Vol1 extends Vol{
+	Vol1(double a, double b) {
+		super(a, b);
+	}
+
+	void volu(){
+		System.out.println("Cone volume  " + pi*l*h*h/3 );
+	}
+}
+
+class Vol2 extends Vol{
+
+	Vol2(double a, double b) {
+		super(a, b);
+	}
+	void volu(){
+		System.out.println("Prism volume  "+ l*l*h );
+	}
+}
+
+public class Volumee{
+
+	public static void main(String[] args) {
+		Vol vob = new Vol(8.6,69.6);
+		vob.volu();
+		Vol v1ob = new Vol1(20.6,35.69);
+		v1ob.volu();
+		Vol v2ob = new Vol2(33.52,45.5);
+		v2ob.volu();
+	}
+
+}
